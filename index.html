@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Web Server</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main container */
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+        }
+
+        /* Header styles */
+        h1 {
+            font-size: 3em;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Section titles */
+        h2 {
+            font-size: 1.8em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Form styling */
+        form {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            resize: none;
+            background-color: #fafafa;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Links */
+        a {
+            color: #4CAF50;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Node.js Web Server</h1>
+
+        <h2>Write to File</h2>
+        <form action="/write" method="POST">
+            <label for="content">Enter content:</label><br>
+            <textarea name="content" id="content" placeholder="Write your content here..."></textarea><br>
+            <button type="submit">Write to file</button>
+        </form>
+
+        <h2>Read from File</h2>
+        <p><a href="/read">Click here to read the file</a></p>
+    </div>
+</body>
+</html>
